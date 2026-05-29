@@ -1,9 +1,7 @@
 # SUS Calc
 
 Calculadora do questionário **System Usability Scale (SUS)** desenvolvida em React.
-
-Atividade prática da disciplina Modelagem de Interfaces — UI/UX  
-Bloco IV — Avaliação de Usabilidade | PUC Goiás — ADS
+Autor: Gabriel Vital Al Jawabri
 
 ---
 
