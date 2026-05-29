@@ -1,7 +1,6 @@
 # SUS Calc
 
 Calculadora do questionário **System Usability Scale (SUS)** desenvolvida em React.
-Autor: Gabriel Vital Al Jawabri
 
 ---
 
@@ -29,8 +28,8 @@ Acesse em: http://localhost:5173
 
 ## Discente
 
-Nome: [SEU NOME AQUI]  
-Matrícula: [SUA MATRÍCULA AQUI]
+Aluno: Gabriel Vital Al Jawabri
+MATRÍCULA: 20251012000058
 
 ## Estrutura do projeto
 
