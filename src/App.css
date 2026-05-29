@@ -62,7 +62,6 @@ body {
    C8 — Formulário SUS e ScoreCard
    ========================================================= */
 
-/* --- Formulário --- */
 .sus-form-section {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
@@ -103,7 +102,6 @@ body {
   border-color: var(--color-accent);
 }
 
-/* --- Lista de questões --- */
 .sus-questions {
   list-style: none;
   display: flex;
@@ -128,7 +126,6 @@ body {
   line-height: 1.5;
 }
 
-/* --- Escala Likert --- */
 .likert-scale {
   display: flex;
   gap: 8px;
@@ -183,7 +180,6 @@ body {
   color: var(--color-muted);
 }
 
-/* --- Erro e botão submit --- */
 .error-message {
   margin: 16px 0;
   padding: 10px 14px;
@@ -213,7 +209,6 @@ body {
   opacity: 0.85;
 }
 
-/* --- ScoreCard --- */
 .score-card {
   margin-top: 28px;
   padding: 28px 32px;
@@ -242,4 +237,139 @@ body {
   font-size: 1.125rem;
   font-weight: 500;
   opacity: 0.9;
+}
+
+/* =========================================================
+   C9 — Histórico, média, responsividade e ajustes finais
+   ========================================================= */
+
+/* --- ScoreHistory --- */
+.score-history {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  margin-top: 8px;
+}
+
+.score-history.empty {
+  text-align: center;
+  color: var(--color-muted);
+  font-size: 0.9375rem;
+  padding: 40px 32px;
+}
+
+.score-history h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin-bottom: 20px;
+}
+
+/* --- Tabela --- */
+.history-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  font-size: 0.9375rem;
+}
+
+.history-table thead tr {
+  border-bottom: 1.5px solid var(--color-border);
+}
+
+.history-table th {
+  padding: 8px 12px 10px;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+}
+
+.history-table tbody tr {
+  border-bottom: 1px solid var(--color-border);
+  transition: background 0.1s;
+}
+
+.history-table tbody tr:hover {
+  background: var(--color-bg);
+}
+
+.history-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.history-table td {
+  padding: 12px 12px;
+  color: var(--color-text);
+}
+
+.history-table td:first-child {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8125rem;
+  color: var(--color-muted);
+  width: 40px;
+}
+
+.history-table td:nth-child(2) {
+  font-family: 'DM Mono', monospace;
+  font-weight: 500;
+}
+
+/* --- Média e botão limpar --- */
+.history-average {
+  padding: 14px 12px;
+  background: var(--color-bg);
+  border-radius: var(--radius-md);
+  font-size: 0.9375rem;
+  margin-bottom: 20px;
+}
+
+.history-average strong {
+  font-weight: 600;
+}
+
+.btn-clear {
+  padding: 10px 20px;
+  background: transparent;
+  color: var(--color-muted);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-clear:hover {
+  border-color: #b91c1c;
+  color: #b91c1c;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 480px) {
+  .app {
+    padding: 24px 16px 60px;
+  }
+
+  .sus-form-section,
+  .score-history {
+    padding: 20px 16px;
+  }
+
+  .likert-scale {
+    gap: 4px;
+  }
+
+  .likert-option input[type="radio"] {
+    width: 30px;
+    height: 30px;
+  }
+
+  .score-card__score {
+    font-size: 2.5rem;
+  }
 }
