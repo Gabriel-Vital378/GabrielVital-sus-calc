@@ -51,3 +51,5 @@ sus-calc/
 ├── package.json
 └── README.md
 ```
+
+# Uma observação, no conjunto 1 e conjunto 2 os valores estão dando respectivamente 60 e 90 , não consigo achar o erro no cálculo, ai não sei se está errado no meu código ou se os valores de teste estão errado
