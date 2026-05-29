@@ -57,3 +57,189 @@ body {
   margin-top: 4px;
   font-family: 'DM Mono', monospace;
 }
+
+/* =========================================================
+   C8 — Formulário SUS e ScoreCard
+   ========================================================= */
+
+/* --- Formulário --- */
+.sus-form-section {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 24px;
+}
+
+.form-group {
+  margin-bottom: 28px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin-bottom: 8px;
+}
+
+.form-group input[type="text"] {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--color-text);
+  background: var(--color-bg);
+  transition: border-color 0.15s;
+  outline: none;
+}
+
+.form-group input[type="text"]:focus {
+  border-color: var(--color-accent);
+}
+
+/* --- Lista de questões --- */
+.sus-questions {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.sus-question {
+  padding: 20px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.sus-question:last-child {
+  border-bottom: none;
+}
+
+.question-text {
+  display: block;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
+
+/* --- Escala Likert --- */
+.likert-scale {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 6px;
+}
+
+.likert-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+}
+
+.likert-option input[type="radio"] {
+  appearance: none;
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg);
+  cursor: pointer;
+  transition: all 0.12s;
+  display: grid;
+  place-items: center;
+}
+
+.likert-option input[type="radio"]:checked {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+.likert-option input[type="radio"]:hover:not(:checked) {
+  border-color: var(--color-muted);
+  background: var(--color-border);
+}
+
+.likert-option span {
+  font-size: 0.8125rem;
+  font-family: 'DM Mono', monospace;
+  color: var(--color-muted);
+}
+
+.likert-labels {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+}
+
+.likert-labels span {
+  font-size: 0.6875rem;
+  color: var(--color-muted);
+}
+
+/* --- Erro e botão submit --- */
+.error-message {
+  margin: 16px 0;
+  padding: 10px 14px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: var(--radius-sm);
+  color: #b91c1c;
+  font-size: 0.875rem;
+}
+
+.btn-submit {
+  margin-top: 24px;
+  width: 100%;
+  padding: 13px;
+  background: var(--color-accent);
+  color: #ffffff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-size: 0.9375rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.btn-submit:hover {
+  opacity: 0.85;
+}
+
+/* --- ScoreCard --- */
+.score-card {
+  margin-top: 28px;
+  padding: 28px 32px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+  color: #ffffff;
+}
+
+.score-card__system {
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.8;
+  margin-bottom: 8px;
+}
+
+.score-card__score {
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.score-card__label {
+  font-size: 1.125rem;
+  font-weight: 500;
+  opacity: 0.9;
+}
